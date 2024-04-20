@@ -39,8 +39,8 @@ COMMITID = 'none'
 
 base = [
     # paddleaudio align with librosa==0.8.1, which need numpy==1.23.x
-    "librosa==0.8.1",
-    "numpy==1.23.5",
+    "librosa",
+    "numpy<2.0.0",
     "kaldiio",
     "pathos",
     "pybind11",
@@ -92,9 +92,9 @@ def check_output(cmd: Union[str, List[str], Tuple[str]], shell=False):
 
 def _run_cmd(cmd):
     try:
-        return subprocess.check_output(
+        return sp.check_output(
             cmd, cwd=ROOT_DIR,
-            stderr=subprocess.DEVNULL).decode("ascii").strip()
+            stderr=sp.DEVNULL).decode("ascii").strip()
     except Exception:
         return None
 
