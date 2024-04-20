@@ -16,6 +16,7 @@
 build
 *output/
 .history
+.venv
 
 audio/dist/
 audio/fc_patch/
