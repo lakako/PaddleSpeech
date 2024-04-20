@@ -2,6 +2,7 @@
 #pragma once
 
 #include <sox.h>
+#include <string>
 #include "paddleaudio/src/optional/optional.hpp"
 
 namespace paddleaudio {
